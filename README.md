@@ -1,4 +1,5 @@
-# WebsiteWithDjango
+# Website With Django
 - Blog site
 - Python 3
-- Django frame work
+- Django framework
+- Well structured.
