@@ -40,3 +40,6 @@ db.sqlite3
 
 # Windows system files
 Thumbs.db
+
+# others unnecessay files
+others/
