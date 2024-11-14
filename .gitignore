@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+
+# Django stuff:
+*.log
+db.sqlite3
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# If you're using Jupyter notebooks
+.ipynb_checkpoints
+
+# Media and static files
+/media/
+/staticfiles/
+
+# Environment variables and secrets
+.env
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
