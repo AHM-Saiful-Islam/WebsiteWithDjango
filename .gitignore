@@ -41,5 +41,6 @@ db.sqlite3
 # Windows system files
 Thumbs.db
 
-# others unnecessay files
+# others unnecessay folders or files
 others/
+index_old.html
