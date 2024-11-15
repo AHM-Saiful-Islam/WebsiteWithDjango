@@ -56,7 +56,7 @@ ROOT_URLCONF = 'science_tech_blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'blog' / 'templates' / 'blog'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
