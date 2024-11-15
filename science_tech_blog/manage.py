@@ -20,3 +20,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+    # Run migrations before starting the server
+    if 'runserver' in sys.argv:
+        from django.core.management import call_command
+        call_command('migrate')  # Apply migrations automatically

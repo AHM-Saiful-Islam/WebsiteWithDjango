@@ -8,17 +8,21 @@
 /* Body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     color: #333;
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0; /* Ensure there's no extra padding */
 }
+
+
 
 /* Navbar Styling */
 header .navbar {
     background-color: #333;
-    padding: 15px 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a better look */
 }
 
 header .navbar .container {
@@ -39,29 +43,41 @@ header .navbar ul li {
 }
 
 header .navbar ul li a {
-    color: white;
+    color: #f1f1f1;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .navbar ul li a:hover {
+    color: #007BFF; /* Add hover effect */
 }
 
 header .navbar h1 a {
     color: white;
     text-decoration: none;
     font-size: 24px;
+    font-weight: bold;
 }
 
 /* Main Content Section */
-.content {
+main .container {
     flex: 1; /* Ensure content takes up the space available */
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add soft shadow for better contrast */
+    margin-top: 20px; /* Space from top */
 }
 
+/* Blog Posts Section */
 .blog-posts h2 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+    text-align: center; /* Center align heading */
 }
 
 .post-card {
@@ -71,6 +87,12 @@ header .navbar h1 a {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.post-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .post-card h3 {
@@ -94,10 +116,12 @@ header .navbar h1 a {
     margin-top: 10px;
     color: #007BFF;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .post-card .read-more:hover {
     text-decoration: underline;
+    color: #0056b3; /* Darker shade for hover */
 }
 
 /* Footer Styling */
@@ -106,17 +130,19 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Ensure footer stays at the bottom */
+    margin-top: auto;
     width: 100%;
+    font-size: 14px;
 }
 
 footer p {
+    margin: 0;
     font-size: 14px;
 }
 
 /* Ensure footer is always at the bottom */
 html, body {
-    height: 100%; /* Full height to allow footer at the bottom */
+    height: 100%;
 }
 
 body {
@@ -124,6 +150,48 @@ body {
     flex-direction: column;
 }
 
-.footer {
+footer {
     margin-top: auto; /* Push footer to bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .blog-posts h2 {
+        font-size: 24px;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .post-card h3 {
+        font-size: 20px;
+    }
+
+    .post-card .meta {
+        font-size: 12px;
+    }
+
+    .post-card .excerpt {
+        font-size: 14px;
+    }
 }
