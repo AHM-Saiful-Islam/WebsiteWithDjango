@@ -6,7 +6,17 @@
         <h2>Contact Us</h2>
         <p>For inquiries, please reach out to us at contact@technova.com or fill out the form below.</p>
         
-        <form action="/submit_contact/" method="post" class="contact-form">
+         <!-- Display success or error messages -->
+         {% if messages %}
+         <div class="alert alert-info">
+             {% for message in messages %}
+                 <p>{{ message }}</p>
+             {% endfor %}
+         </div>
+         {% endif %}
+
+        <!-- form -->
+        <form action="/contact_view/" method="post" class="contact-form">
             {% csrf_token %}
             <div class="form-group">
                 <label for="name">Name:</label>
