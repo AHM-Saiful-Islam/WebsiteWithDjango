@@ -261,3 +261,37 @@ footer {
     }
 }
 /* Basic styling for the form container - End*/
+
+/* the success/error alert messages design -- start */
+.alert {
+    position: absolute;
+    top: 20%;  /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8d7da; /* Light red for error (you can customize for success or info) */
+    color: #721c24; /* Dark red for error */
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    font-size: 1.5rem;  /* Larger text */
+    font-weight: bold;  /* Make the text bold */
+    width: 60%;  /* Adjust the width as needed */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: fadeInOut 3s ease-out;  /* Fade out effect */
+}
+
+/* Success message specific styling (you can add more styles if needed) */
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* the success/error alert messages design -- End */
+
